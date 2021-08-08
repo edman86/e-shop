@@ -1,0 +1,31 @@
+.header {
+    background-color: azure;
+}
+
+
+.header-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    font-size: 2rem;
+} 
+
+.navigation-container {
+    display: flex;
+}
+
+.nav-item {
+    display: block;
+    padding: .5em 1.5em;
+    font-size: 1.5rem;   
+    margin-right: 2.5em;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
