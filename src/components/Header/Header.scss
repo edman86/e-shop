@@ -17,15 +17,78 @@
 
 .navigation-container {
     display: flex;
-}
 
-.nav-item {
-    display: block;
-    padding: .5em 1.5em;
-    font-size: 1.5rem;   
-    margin-right: 2.5em;
+    .nav-item {
+        display: block;
+        // padding: .5em 1.5em;
+        font-size: 1.5rem;   
+        margin-right: 2em;
+        padding: 0.5em 0;
+    
+        &:last-child {
+            margin-right: 0;
+            border: 1px solid black;
+            padding-left: 0.5em;
+            padding-right: 0.5em; 
+        }
 
-    &:last-child {
-        margin-right: 0;
+        .user {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &-popup {
+                position: absolute;
+                padding: .5em 1em;
+                cursor: pointer;
+                background-color: cornflowerblue;
+                color: #fff;
+                opacity: 0;
+                transition: all .5s;
+                
+                &::before {
+                    content: '';
+                    display: block;
+                    border: 10px solid cornflowerblue;
+                    border-top-color: transparent;
+                    border-left-color: transparent;
+                    width: 10px;
+                    position: absolute;
+                    margin: auto;
+                    top: -15px;
+                    left: 0;
+                    right: 0;
+                    transform: translateX(-50%);
+                }
+
+                &::after {
+                    content: '';
+                    display: block;
+                    border: 10px solid cornflowerblue;
+                    border-top-color: transparent;
+                    border-right-color: transparent;
+                    width: 10px;
+                    position: absolute;
+                    margin: auto;
+                    top: -15px;
+                    left: 0;
+                    right: 0;
+                    transform: translateX(50%);
+                }
+
+                &:hover {
+                    margin-top: 5.5em;
+                    opacity: 1;
+                }
+            }
+            
+            &:hover .user-popup {
+                margin-top: 5.5em;
+                opacity: 1;
+            }
+        
+        }
     }
+
 }
